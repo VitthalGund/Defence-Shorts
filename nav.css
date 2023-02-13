@@ -3,7 +3,7 @@
 }
 :root {
   --color-text: orange;
-  --color-back: rgb(0, 0, 0);
+  --color-back: black;
 }
 
 *::-webkit-scrollbar {
