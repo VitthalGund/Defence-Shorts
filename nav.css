@@ -154,7 +154,7 @@
     height: 0px;
   }
   .nav > #nav-check:checked ~ .nav-links {
-    height: calc(38vh - 50px);
+    height: 200px;
     overflow-y: auto;
     background-color: whitesmoke;
   }
