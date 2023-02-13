@@ -8,6 +8,7 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 *::-webkit-scrollbar {
   height: 0px;
@@ -96,11 +97,12 @@ input {
 .container .title {
   font-size: 25px;
   font-weight: 500;
-  position: relative;
+  padding: 10px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
 }
 .container .title::before {
   content: "";
-  position: absolute;
   left: 0;
   bottom: 0;
   height: 3px;
