@@ -4,19 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Defence Short</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://sahil29p.github.io/Defence-Shorts/style.css">
-    <link rel="icon" type="image/x-icon" href="https://sahil29p.github.io/Defence-Shorts/Source/IMG/logo.jpg">
-
+    <!-- <link rel="stylesheet" href="https://vitthalgund.github.io/Defence-Shorts/style.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
+    <!-- <link rel="icon" type="image/x-icon" href="https://vitthalgund.github.io/Defence-Shorts/Source/IMG/logo.jpg"> -->
+    <link rel="icon" type="image/x-icon" href="/Source/IMG/logo.jpg">
+    <style>
+    </style>
 </head>
 
 <body>
-    <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
-        <source src="https://sahil29p.github.io/Defence-Shorts/Source/Video/jetBack.mp4" type="video/mp4">
+    <video id="background-video" autoplay loop muted>
+        <!-- <source src="https://vitthalgund.github.io/Defence-Shorts/Source/Video/jetBack.mp4" type="video/mp4"> -->
+        <source src="/Source/Video/jetBack.mp4" type="video/mp4">
+        <div id="default"></div>
     </video>
     <nav>
         </div>
@@ -24,9 +30,10 @@
             <input type="checkbox" id="nav-check">
             <div class="nav-header">
                 <div class="nav-title">
-                    <img src="https://sahil29p.github.io/Defence-Shorts/Source/IMG/logo.jpg" class="nav-title nav-header" id="logo" alt="">
+                    <!-- <img src="https://vitthalgund.github.io/Defence-Shorts/Source/IMG/logo.jpg"> -->
+                    <img src="/Source/IMG/logo.jpg" class="nav-title nav-header" id="logo" alt="">
                 </div>
-                <div class="nav-titleN">Defence Shorts</div>
+                <div class="nav-titleN nav-link">Defence Shorts</div>
             </div>
             <div class="nav-btn">
                 <label for="nav-check">
@@ -37,16 +44,25 @@
             </div>
 
             <div class="nav-links">
-                <a href="https://sahil29p.github.io/Defence-Shorts/about.html" target="_blank">About</a>
-                <a href="https://www.youtube.com/@defenceshort1/" target="_blank" style="color: red;">YouTube</a>
-                <a href="https://sahil29p.github.io/Defence-Shorts/contact.html" target="_blank">Contact</a>
+                <!-- <a href="https://vitthalgund.github.io/Defence-Shorts/about.html" target="_blank"
+                    class="nav-link nav-link-ltr">About</a> -->
+                <a href="about.html" target="_blank" class="nav-link nav-link-ltr">About</a>
+                <a href="https://www.youtube.com/@defenceshort1/" target="_blank" style="color: red;"
+                    class="nav-link nav-link-ltr">YouTube</a>
+                <!-- <a href="https://vitthalgund.github.io/Defence-Shorts/contact.html" target="_blank"
+                    class="nav-link nav-link-ltr">Contact</a> -->
+                <a href="contact.html" target="_blank" class="nav-link nav-link-ltr">Contact</a>
             </div>
         </div>
     </nav>
+
     <main>
         <div class="content">
-            <h2>Defence Shorts</h2>
-            <p>नमस्ते, मे Defence Show पर आपका स्वागत करता हुँ मे इस Youtube Channel पर Defence से जुडी 2-3 Videos
+            <!-- <h2>Defence Shorts</h2> -->
+            <h2></h2>
+            <p style="margin-top:30px;">
+                नमस्ते, मे Defence Show पर आपका स्वागत करता हुँ मे इस Youtube Channel पर Defence
+                से जुडी 2-3 Videos
                 Upload करता हूँ
                 पहेली वीडियो का समय सुबह 9:10 बाजे दूसरी वीडियो का समय दोपहर 2:10 बजे तीसरी वीडियो का समय शाम 7:10
                 बजे होता है तीनो ही
@@ -90,7 +106,7 @@
         </div>
     </main>
     <footer>
-        <div class="">
+        <div>
             <div class="column about">
                 <h2>Defence Shorts</h2>
                 <p>
@@ -134,18 +150,19 @@
                 <h2>Subscribe</h2>
                 <div>
                     <input type="email" required placeholder="Your email id here" id="element" />
-                    <button type="submit" id="btn">Subscribe</button>
+                    <button type="button" id="btn" onclick="">Subscribe</button>
                 </div>
             </div>
         </div>
         <div class="row copyright">
-            <div class="footer-menu">
-                <a href="https://sahil29p.github.io/Defence-Shorts/about.html">About</a>
-                <a href="https://sahil29p.github.io/Defence-Shorts/contact.html">Contact</a>
+            <span class="footer-menu">
+                <!-- <a href="https://vitthalgund.github.io/Defence-Shorts/index.html">Home</a> -->
+                <a href="about.html">About</a>
+                <!-- <a href="https://vitthalgund.github.io/Defence-Shorts/contact.html">Contact</a> -->
+                <a href="contact.html">Contact</a>
                 <a href="https://www.youtube.com/@defenceshort1/">Social</a>
-
-            </div>
-            <p>Copyright &copy; 2022 Defence Shorts</p>
+            </span>
+            <p id="copy" class="copyright">Copyright &copy; 2022 Defence Shorts</p>
         </div>
     </footer>
     <script src="script.js"></script>
