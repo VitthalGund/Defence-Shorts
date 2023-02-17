@@ -26,40 +26,44 @@ function create(htmlStr) {
     return frag;
 }
 
+const validateEmail = (email) => {
+    let r = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
+    return r.test(email);
+};
+
 // To show custom alert
-const alert = (message, type = 'success', id = 'default', time = 3000) => {
-    let fragment = create(`<div class="alert mb-0 alert-${type} alert-dismissible" role="alert">
-            <div>${message}</div>,
+const alert = (message, type = 'success', id = 'default', time = 4000) => {
+    let pos = document.getElementById(id);
+    pos.innerHTML = `<div class="alert mb-0 alert-${type} alert-dismissible" style="position:fixed;display:block;top:0;width=100%;"role="alert">
+            <div>${message}</div>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>`);
-    document.body.insertBefore(fragment, document.getElementById(id));
+            </div>`;
     setTimeout(() => {
-        document.body.removeChild(document.getElementById(id));
+        pos.innerHTML = " ";
     }, time);
 }
 
 
+const submitBtn = document.getElementById('btn');
 const clickValidEmail = () => {
-    const submitBtn = document.getElementById('btn');
-    let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if (submitBtn.value.match(validRegex)) {
-
-    } else {
-
-    }
-    if (/(.+)@(.+){2,}\.(.+){2,}/.test(submitBtn.value)) {
+    console.log("inFunction");
+    let val = document.querySelector('#element').value;
+    console.log(val)
+    if (validateEmail(val)) {
+        console.log("inConditionIF");
         alert("Thanks for Subscribing our Services!");
     } else {
+        console.log("inConditionELSE");
         alert("Please,Enter the Vaild Email Address!", 'danger');
     }
 }
 
 
-// submitBtn.addEventListener('click', (e) => {
-//     // e.preventDefault();
-//     clickValidEmail();
-// })
+submitBtn.addEventListener('click', (e) => {
+    // e.preventDefault();
+    clickValidEmail();
+})
 const copyRight = document.getElementById('copy');
 copyRight.innerHTML = `Copyright &copy; ${new Date().getFullYear()} Defence Shorts`
 
-setInterval((console.clear()),500);
+// setInterval((console.clear()),500);
