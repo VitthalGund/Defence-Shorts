@@ -1,19 +1,3 @@
-// let inp = document.getElementById('element');
-// function handed() {
-//     let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-//     if (inp.value.match(validRegex)) {
-//         inp.scrollTop();
-//         alert("Please,Enter the Vaild Email Address!", 'danger');
-//     } else {
-//         inp.scrollTop();
-//         alert("Thanks to Subscribe!");
-//         window.location.href("https://www.youtube.com/@defenceshort1/");
-//     }
-// }
-// inp.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     handed();
-// });
 
 // TO create Elements Tag
 function create(htmlStr) {
