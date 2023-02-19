@@ -38,9 +38,9 @@ const alert = (message, type = 'success', id = 'default', time = 4000) => {
             <div>${message}</div>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>`;
-    // setTimeout(() => {
-    //     pos.innerHTML = " ";
-    // }, time);
+    setTimeout(() => {
+        pos.innerHTML = " ";
+    }, time);
 }
 
 const loadJavaScriptFile = async (url) => {
@@ -68,7 +68,23 @@ const clickValidEmail = () => {
     }
 }
 
+const handleContactSubmit = () => {
+    const num = document.querySelector("type='number'").value > 9 ? document.querySelector("type='number'").value : "No";
+    console.log(num);
+    const email = clickValidEmail(document.querySelector("type='email'").value) ? document.querySelector("type='email'").value : "No";
+    console.log(email);
+    if (email != "No" && num != "No") {
+        alert("Thanks to Contact Us!\nWe Will soon contact You using given details!");
+    } else {
+        alert("Please, Enter the Valid Details!");
+    }
 
+}
+
+const connect = document.getElementById('contacts')
+connect.addEventListener('click', (e) => {
+    handleContactSubmit();
+})
 submitBtn.addEventListener('click', (e) => {
     // e.preventDefault();
     clickValidEmail();
