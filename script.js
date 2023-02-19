@@ -31,12 +31,15 @@ const loadJavaScriptFile = async (url) => {
     return new Promise((resolve, reject) => {
         let script = document.createElement('script');
         script.src = url;
+        script.integrity = "sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN";
+        script.crossOrigin = "anonymous";
         script.onload = () => {
             resolve("Script Loaded Successfully!");
         }
         document.body.append(script);
     });
 }
+// loadJavaScriptFile("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css");
 
 const submitBtn = document.getElementById('btn');
 const clickValidEmail = () => {
