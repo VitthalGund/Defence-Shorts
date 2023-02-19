@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="https://vitthalgund.github.io/Defence-Shorts/contact.css"> -->
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="contact.css">
@@ -13,8 +15,8 @@
     <!-- <link rel="icon" type="image/x-icon" href="https://vitthalgund.github.io/Defence-Shorts/Source/IMG/logo.jpg"> -->
     <link rel="icon" type="image/x-icon" href="/Source/IMG/logo.jpg">
     <style>
-        .nav{
-            background-color: black;
+        .nav {
+            background-color: rgb(255, 255, 255);
         }
     </style>
 </head>
@@ -52,56 +54,59 @@
             </div>
         </div>
     </nav>
-    <div class="mainform">
-        <div class="container">
-            <div class="title">Contact Us</div>
-            <div class="content">
-                <form action="#" method="POST">
-                    <div class="user-details">
-                        <div class="input-box">
-                            <span class="details">Full Name</span>
-                            <input type="text" placeholder="Enter your name" required>
+    <main>
+        <div id="default"></div>
+        <div class="mainform">
+            <div class="container">
+                <div class="title">Contact Us</div>
+                <div class="content">
+                    <form action="#" method="POST">
+                        <div class="user-details">
+                            <div class="input-box">
+                                <span class="details">Full Name</span>
+                                <input type="text" placeholder="Enter your name" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Email</span>
+                                <input type="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Phone Number</span>
+                                <input type="number" placeholder="Enter your number" required>
+                            </div>
+                        </div>
+                        <div class="gender-details">
+                            <input type="radio" name="gender" id="dot-1">
+                            <input type="radio" name="gender" id="dot-2">
+                            <input type="radio" name="gender" id="dot-3">
+                            <span class="gender-title">Gender</span>
+                            <div class="category">
+                                <label for="dot-1">
+                                    <span class="dot one"></span>
+                                    <span class="gender">Male</span>
+                                </label>
+                                <label for="dot-2">
+                                    <span class="dot two"></span>
+                                    <span class="gender">Female</span>
+                                </label>
+                                <label for="dot-3">
+                                    <span class="dot three"></span>
+                                    <span class="gender">other</span>
+                                </label>
+                            </div>
                         </div>
                         <div class="input-box">
-                            <span class="details">Email</span>
-                            <input type="email" placeholder="Enter your email" required>
+                            <span class="details" id="des">Description</span>
+                            <textarea name="" id="" cols="30" rows="15" placeholder="Enter Reason" required></textarea>
                         </div>
-                        <div class="input-box">
-                            <span class="details">Phone Number</span>
-                            <input type="number" placeholder="Enter your number" required>
+                        <div class="button">
+                            <input type="submit" value="Register">
                         </div>
-                    </div>
-                    <div class="gender-details">
-                        <input type="radio" name="gender" id="dot-1">
-                        <input type="radio" name="gender" id="dot-2">
-                        <input type="radio" name="gender" id="dot-3">
-                        <span class="gender-title">Gender</span>
-                        <div class="category">
-                            <label for="dot-1">
-                                <span class="dot one"></span>
-                                <span class="gender">Male</span>
-                            </label>
-                            <label for="dot-2">
-                                <span class="dot two"></span>
-                                <span class="gender">Female</span>
-                            </label>
-                            <label for="dot-3">
-                                <span class="dot three"></span>
-                                <span class="gender">other</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="input-box">
-                        <span class="details" id="des">Description</span>
-                        <textarea name="" id="" cols="30" rows="15" placeholder="Enter Reason" required></textarea>
-                    </div>
-                    <div class="button">
-                        <input type="submit" value="Register">
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
     <footer>
         <div>
             <div class="column links">
@@ -125,8 +130,8 @@
             <div class="column subscribe">
                 <h2>Subscribe</h2>
                 <div>
-                    <input type="email" required placeholder="Your email id here" class="mx-3" id="element" />
-                    <button class=" mx-3" type="submit">Subscribe</button>
+                    <input type="email" required placeholder="Your email id here" id="element" />
+                    <button type="button" id="btn" onclick="">Subscribe</button>
                 </div>
             </div>
         </div>

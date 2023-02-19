@@ -109,6 +109,9 @@
   position: absolute;
   left: 40px;
 }
+.nav-titleN:hover {
+  color:rgb(0, 21, 255);
+}
 
 @media (max-width: 600px) {
   .nav > .nav-btn {

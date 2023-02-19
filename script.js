@@ -34,15 +34,25 @@ const validateEmail = (email) => {
 // To show custom alert
 const alert = (message, type = 'success', id = 'default', time = 4000) => {
     let pos = document.getElementById(id);
-    pos.innerHTML = `<div class="alert mb-0 alert-${type} alert-dismissible" style="position:fixed;display:block;top:0;width=100%;"role="alert">
+    pos.innerHTML = `<div class="alert mb-0 alert-${type} alert-dismissible" style="position:fixed;top:0;width=100%;"role="alert">
             <div>${message}</div>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>`;
-    setTimeout(() => {
-        pos.innerHTML = " ";
-    }, time);
+    // setTimeout(() => {
+    //     pos.innerHTML = " ";
+    // }, time);
 }
 
+const loadJavaScriptFile = async (url) => {
+    return new Promise((resolve, reject) => {
+        let script = document.createElement('script');
+        script.src = url;
+        script.onload = () => {
+            resolve("Script Loaded Successfully!");
+        }
+        document.body.append(script);
+    });
+}
 
 const submitBtn = document.getElementById('btn');
 const clickValidEmail = () => {
