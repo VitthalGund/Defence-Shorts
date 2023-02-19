@@ -69,14 +69,14 @@ const clickValidEmail = () => {
 }
 
 const handleContactSubmit = () => {
-    const num = document.querySelector("type='number'").value > 9 ? document.querySelector("type='number'").value : "No";
+    const num = document.getElementById('number').value > 9 ? document.getElementById('number').value : "No";
     console.log(num);
-    const email = clickValidEmail(document.querySelector("type='email'").value) ? document.querySelector("type='email'").value : "No";
+    const email = clickValidEmail(document.getElementById('email').value) ? document.getElementById('email').value : "No";
     console.log(email);
     if (email != "No" && num != "No") {
         alert("Thanks to Contact Us!\nWe Will soon contact You using given details!");
     } else {
-        alert("Please, Enter the Valid Details!");
+        alert("Please, Enter the Valid Details!",'danger');
     }
 
 }
