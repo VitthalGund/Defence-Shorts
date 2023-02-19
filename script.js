@@ -71,7 +71,7 @@ const clickValidEmail = () => {
 const handleContactSubmit = () => {
     const num = document.getElementById('number').value > 9 ? document.getElementById('number').value : "No";
     console.log(num);
-    const email = clickValidEmail(document.getElementById('email').value) ? document.getElementById('email').value : "No";
+    const email = validateEmail(document.getElementById('email').value) ? document.getElementById('email').value : "No";
     console.log(email);
     if (email != "No" && num != "No") {
         alert("Thanks to Contact Us!\nWe Will soon contact You using given details!");
@@ -84,7 +84,8 @@ const handleContactSubmit = () => {
 const connect = document.getElementById('contacts')
 connect.addEventListener('click', (e) => {
     handleContactSubmit();
-})
+});
+
 submitBtn.addEventListener('click', (e) => {
     // e.preventDefault();
     clickValidEmail();
