@@ -76,7 +76,7 @@ const handleContactSubmit = () => {
     if (email != "No" && num != "No") {
         alert("Thanks to Contact Us!\nWe Will soon contact You using given details!");
     } else {
-        alert("Please, Enter the Valid Details!",'danger');
+        alert("Please, Enter the Valid Details!", 'danger');
     }
 
 }
